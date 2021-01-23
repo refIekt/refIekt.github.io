@@ -1,0 +1,21 @@
+---
+---
+//$primary: red;
+@import 'main';
+
+.navbar-brand {
+  a.navbar-item {
+    width: 60px;
+    font-size: 0;
+    text-indent: -999px;
+    color: transparent;
+    background-image: url('/assets/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+// Documentation.
+p.menu-label {
+  display: none;
+}
