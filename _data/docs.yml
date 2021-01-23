@@ -1,6 +1,6 @@
 - items:
     - name: Usage
-      link: /usage/getting-started
+      link: /usage
       items:
         - name: Getting started
           link: /usage/getting-started
