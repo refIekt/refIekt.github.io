@@ -28,36 +28,45 @@
   }
 }
 .hero {
+  text-align: center;
   .title,
   .subtitle,
-  .hero__icon,
-  .hero__code {
+  .hero__icon {
     display: block;
     margin: 0 auto;
-  }
-  .title,
-  .subtitle {
-    text-align: center;
-  }
-  .title {
-    margin-bottom: 2rem;
   }
   .hero__icon {
     max-width: 300px;
     margin-bottom: 1rem;
   }
-  .hero__code {
-    margin-top: 3rem;
-    max-width: 300px;
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    .highlight {
-      font-size: 1.5rem;
-      border-radius: 8px;
-    }
+  .title,
+  .subtitle {
+    color: black;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.35);
+  }
+  .title {
+    margin-bottom: 2rem;
+  }
+  .hero__button {
+    margin-top: 1rem;
+  }
+}
+
+.code {
+  margin: 2rem auto;
+  width: 350px;
+  label {
+    color: black;
+    font-size: 1.2rem;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .highlight {
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    border-radius: 8px;
   }
 }
 

@@ -1,13 +1,18 @@
 ---
 show_hero: true
 title: Reflective testing
+subtitle: Testing that's completely automated.
+hero_image: /assets/backgrounds/hero.jpg
 hero_icon: /assets/logo.svg
-code_label: Usage
+hero_link: /docs/getting-started
+hero_link_text: Get Started
 code: >
   ```ruby
+    # Usage:
     class Example
       prepend Reflekt
     end
+    # And that's it!
   ```
 callouts: callouts
 ---
