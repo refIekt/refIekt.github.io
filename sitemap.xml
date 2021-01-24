@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/architecture/control-experiment-loop.html</loc>
+<loc>/docs/control-experiment-loop.html</loc>
 </url>
 <url>
-<loc>/usage/getting-started.html</loc>
-</url>
-<url>
-<loc>/usage/</loc>
-</url>
-<url>
-<loc>/architecture/</loc>
+<loc>/docs/getting-started.html</loc>
 </url>
 <url>
 <loc>/</loc>
 </url>
 <url>
-<loc>/architecture/reflect-execute-loop.html</loc>
+<loc>/docs/reflect-execute-loop.html</loc>
+</url>
+<url>
+<loc>/docs/usage.html</loc>
 </url>
 </urlset>

@@ -19,19 +19,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
     
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Reflekt | Reflective testing.</title>
+<title>Usage | Reflekt</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Reflekt" />
+<meta property="og:title" content="Usage" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Reflective testing." />
 <meta property="og:description" content="Reflective testing." />
-<link rel="canonical" href="/404.html" />
-<meta property="og:url" content="/404.html" />
+<link rel="canonical" href="/docs/usage.html" />
+<meta property="og:url" content="/docs/usage.html" />
 <meta property="og:site_name" content="Reflekt" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Reflekt" />
+<meta property="twitter:title" content="Usage" />
 <script type="application/ld+json">
-{"description":"Reflective testing.","headline":"Reflekt","@type":"WebPage","url":"/404.html","@context":"https://schema.org"}</script>
+{"description":"Reflective testing.","headline":"Usage","@type":"WebPage","url":"/docs/usage.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- head scripts --></head>
 
@@ -83,33 +83,65 @@
         <div class="columns">
 
           
+            <div class="column is-4-desktop is-4-tablet">
+              
 
-          <div class="column is-12">
-            
-            
-            
-            
-            <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<aside class="menu">
 
-<div class="container">
-  <h1>404</h1>
+    <p class="menu-label"></p>
+    <ul class="menu-list">
+        
+        <li>
+            <a href="" class="">Usage</a>
+            
+            <ul>
+                
+                <li><a href="/docs/getting-started" class="">Getting started</a></li>
+                
+                <li><a href="/docs/skipping-actions" class="">Skipping actions</a></li>
+                
+                <li><a href="/docs/dependency-injection" class="">Dependency injection</a></li>
+                
+            </ul>
+            
+        </li>
+        
+        <li>
+            <a href="" class="">Architecture</a>
+            
+            <ul>
+                
+                <li><a href="/docs/reflect-execute-loop/" class="">Reflect-Execute Loop</a></li>
+                
+                <li><a href="/docs/control-experiment-loop/" class="">Control-Experiment Loop</a></li>
+                
+            </ul>
+            
+        </li>
+            
+    </ul>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+</aside>
+            </div>
+          
+
+          <div class="column is-8">
+            
+            
+            
+            
+            
+<div class="content">
+    <p>Reflekt is designed to be super simple to use, all you have to do is <code class="language-plaintext highlighter-rouge">prepend</code> Reflekt to your class:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyClass</span>
+  <span class="n">prepend</span> <span class="no">Reflekt</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>In practice you will need to skip certain actions from being simulated. This stops duplicate data and prevent real data from being deleted.</p>
+
 </div>
-
           </div>
 
           
