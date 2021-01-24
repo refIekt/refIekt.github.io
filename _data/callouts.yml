@@ -1,0 +1,27 @@
+style: is-light
+height: is-medium
+items:
+  -
+    title: Don't Repeat Yourself
+    icon: fa-copy
+    description: Code is the source of truth.
+  -
+    title: Speed up development
+    icon: fa-clock
+    description: Halve the amount of work.
+  -
+    title: Real test data
+    icon: fa-dice
+    description: Get test results in real-time.
+  -
+    title: Simulate everything
+    icon: fa-bug
+    description: Find bugs you never thought possible.
+  -
+    title: Open source
+    icon: fa-globe-europe
+    description: Community driven.
+  -
+    title: More fun
+    icon: fa-smile-beam
+    description: Less layers, more enjoyment.
