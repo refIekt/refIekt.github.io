@@ -9,7 +9,7 @@ menubar: docs
 
 In your project's Gemfile add:
 ```ruby
-gem "reflekt"
+gem 'reflekt'
 ```  
 
 In terminal run:
@@ -17,7 +17,7 @@ In terminal run:
 bundle install
 ```
 
-Or:
+Or install globally with:
 ```
 gem install reflekt
 ```
@@ -34,6 +34,6 @@ class ExampleClass
 end
 ```
 
-In practice you will need to skip certain actions from being simulated. This stops duplicate data and prevent real data from being deleted.
+In practice you will need to skip certain actions from being simulated, to prevent duplicate data from being rendered to the screen or saved to the database.
 
 **Next:** [Skipping actions](/docs/skipping-actions)
