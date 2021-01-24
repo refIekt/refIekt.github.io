@@ -4,15 +4,15 @@ items:
   -
     title: Don't Repeat Yourself
     icon: fa-copy
-    description: Code is the source of truth.
+    description: Code is the source of truth, not the tests.
   -
     title: Speed up development
     icon: fa-clock
     description: Halve the amount of work.
   -
-    title: Real test data
+    title: Real results
     icon: fa-dice
-    description: Get test results in real-time.
+    description: Test with real data in real-time.
   -
     title: Simulate everything
     icon: fa-bug
@@ -24,4 +24,4 @@ items:
   -
     title: More fun
     icon: fa-smile-beam
-    description: Less layers, more enjoyment.
+    description: Less layers, easier to learn.
