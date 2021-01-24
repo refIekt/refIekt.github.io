@@ -22,7 +22,6 @@ github_username:  refIekt
 # Build settings
 markdown: kramdown
 theme: bulma-clean-theme
-remote_theme: bulma-clean-theme
 plugins:
   - jekyll-feed
 
