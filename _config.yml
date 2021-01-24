@@ -29,7 +29,7 @@ defaults:
     scope:
       type: pages
     values:
-      hide_hero: true
+      show_hero: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

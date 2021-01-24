@@ -1,17 +1,15 @@
 - items:
-    - name: Usage
-      link: /usage
-      items:
-        - name: Getting started
-          link: /usage/getting-started
-        - name: Skipping actions
-          link: /usage/skipping-actions
-        - name: Dependency injection
-          link: /usage/dependency-injection
-    - name: Architecture
-      link: /architecture
-      items:
-        - name: Reflect-Execute Loop
-          link: /architecture/reflect-execute-loop/
-        - name: Control-Experiment Loop
-          link: /architecture/control-experiement-loop/
+  - name: Usage
+    items:
+      - name: Getting started
+        link: /docs/getting-started
+      - name: Skipping actions
+        link: /docs/skipping-actions
+      - name: Dependency injection
+        link: /docs/dependency-injection
+  - name: Architecture
+    items:
+      - name: Reflect-Execute Loop
+        link: /docs/reflect-execute-loop/
+      - name: Control-Experiment Loop
+        link: /docs/control-experiment-loop/
