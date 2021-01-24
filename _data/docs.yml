@@ -5,11 +5,11 @@
         link: /docs/getting-started
       - name: Skipping actions
         link: /docs/skipping-actions
-      - name: Dependency injection
-        link: /docs/dependency-injection
+      - name: Configuration
+        link: /docs/configuration
   - name: Architecture
     items:
-      - name: Reflect-Execute Loop
+      - name: Reflect-Execute loop
         link: /docs/reflect-execute-loop/
-      - name: Control-Experiment Loop
+      - name: Control-Experiment loop
         link: /docs/control-experiment-loop/
