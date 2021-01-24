@@ -19,19 +19,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
     
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Control-Experiment loop | Reflekt</title>
+<title>Skipping actions | Reflekt</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Control-Experiment loop" />
+<meta property="og:title" content="Skipping actions" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Reflective testing." />
 <meta property="og:description" content="Reflective testing." />
-<link rel="canonical" href="/docs/control-experiment-loop.html" />
-<meta property="og:url" content="/docs/control-experiment-loop.html" />
+<link rel="canonical" href="/docs/skipping-actions.html" />
+<meta property="og:url" content="/docs/skipping-actions.html" />
 <meta property="og:site_name" content="Reflekt" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Control-Experiment loop" />
+<meta property="twitter:title" content="Skipping actions" />
 <script type="application/ld+json">
-{"description":"Reflective testing.","headline":"Control-Experiment loop","@type":"WebPage","url":"/docs/control-experiment-loop.html","@context":"https://schema.org"}</script>
+{"description":"Reflective testing.","headline":"Skipping actions","@type":"WebPage","url":"/docs/skipping-actions.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- head scripts --></head>
 
@@ -132,28 +132,49 @@
             
             
 <div class="content">
-    <h1 id="control-experiment-loop">Control-Experiment loop</h1>
+    <h1 id="skipping-actions">Skipping actions</h1>
 
-<p>Reflekt builds itself as you build your application.</p>
+<p>You can configure Reflekt to skip “no undo” methods like deletion and sending email:</p>
 
-<p><strong>Terminology:</strong></p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Control</code> - A shapshot of real data (a subclass of <code class="language-plaintext highlighter-rouge">Reflection</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">Experiment</code> - A shapshot of random data (a subclass of <code class="language-plaintext highlighter-rouge">Reflection</code>)</li>
-</ul>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ExampleClass</span>
+  <span class="n">reflekt_skip</span> <span class="ss">:method_name</span>
+</code></pre></div></div>
 
-<p><strong>The loop:</strong></p>
-<ol>
-  <li>You write code and run it</li>
-  <li>A <code class="language-plaintext highlighter-rouge">Control</code> reflection is created per method call, tracking input and output</li>
-  <li>A set of rules are created from each <code class="language-plaintext highlighter-rouge">Control</code> on how the program works</li>
-  <li>Many <code class="language-plaintext highlighter-rouge">Experiment</code> reflections are created per method call, containing random input and output</li>
-  <li>Each <code class="language-plaintext highlighter-rouge">Experiment</code> is tested to pass or fail the set of rules previously defined by each <code class="language-plaintext highlighter-rouge">Control</code></li>
-  <li>Results are saved to the <code class="language-plaintext highlighter-rouge">/reflections</code> directory</li>
-  <li>Your application returns its usual output</li>
-</ol>
+<h2 id="databases">Databases</h2>
 
-<p>This feedback loop creates better results the more you develop and use your application.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">reflekt_skip</code> on the method that saves to the database to avoid persisting test data. If you still want to save test data to the database then use <a href="https://www.reddit.com/r/programming/comments/iz3rks/if_youre_not_practicing_within_the_scope_of_a/g6i1ex3/">dependency injection</a> to connect to a dummy database.</p>
+
+<h2 id="rendering-test-data">Rendering test data</h2>
+
+<p>Use <code class="language-plaintext highlighter-rouge">reflekt_skip</code> on methods that do the final render to the UI to avoid a visual mess of duplicated elements.
+Separate the final output from the rendering logic so that Reflekt can track changes in output.</p>
+
+<p><strong>Don’t do:</strong></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+
+  <span class="c1"># Business logic.</span>
+  <span class="n">product</span><span class="p">.</span><span class="nf">title</span> <span class="o">=</span> <span class="s2">"Showing </span><span class="si">#{</span><span class="n">product</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">"</span>
+
+  <span class="c1"># Rendering logic.</span>
+  <span class="nb">puts</span> <span class="n">product</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p><strong>Do:</strong></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">reflekt_skip</span> <span class="ss">:render</span>
+
+<span class="c1"># Business logic.</span>
+<span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+  <span class="n">product</span><span class="p">.</span><span class="nf">title</span> <span class="o">=</span> <span class="s2">"Showing </span><span class="si">#{</span><span class="n">product</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">"</span>  
+  <span class="n">render</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="c1"># Rendering logic.</span>
+<span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="n">product</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 </div>
           </div>

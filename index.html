@@ -19,9 +19,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
     
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Reflekt | Reflective testing.</title>
+<title>Reflective testing | Reflekt</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Reflekt" />
+<meta property="og:title" content="Reflective testing" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Reflective testing." />
 <meta property="og:description" content="Reflective testing." />
@@ -29,9 +29,9 @@
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="Reflekt" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Reflekt" />
+<meta property="twitter:title" content="Reflective testing" />
 <script type="application/ld+json">
-{"description":"Reflective testing.","headline":"Reflekt","@type":"WebSite","url":"/","name":"Reflekt","@context":"https://schema.org"}</script>
+{"description":"Reflective testing.","headline":"Reflective testing","@type":"WebSite","url":"/","name":"Reflekt","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- head scripts --></head>
 
@@ -73,14 +73,33 @@
 
 
     
-      <section class="hero  is-medium  is-bold is-primary" >
-    <div class="hero-body ">
-        <div class="container">
-            <h1 class="title is-2"></h1>
-            <p class="subtitle is-3">Reflective testing</p>
-            
-        </div>
+      <section class="hero  is-medium  is-bold is-light" >
+  <div class="hero-body ">
+    <div class="container">
+
+      
+        <img class="hero__icon" src="/assets/logo.svg" />
+      
+
+      
+        <h1 class="title is-2">Reflective testing</h1>
+      
+
+      
+
+      
+
+      <div class="hero__code">
+        <label>Usage:</label>
+        <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">Example</span>
+    <span class="n">prepend</span> <span class="no">Reflekt</span>
+  <span class="k">end</span>
+</code></pre></div></div>
+
+      </div>
+
     </div>
+  </div>
 </section>
 
     
@@ -136,7 +155,7 @@
                             
                             <div class="icon callout-icon">
                             
-                                <i class="fas fa-dice fa-4x"></i>
+                                <i class="fas fa-check-circle fa-4x"></i>
                             
                             </div>
                             
@@ -156,7 +175,7 @@
                             
                             <div class="icon callout-icon">
                             
-                                <i class="fas fa-bug fa-4x"></i>
+                                <i class="fas fa-dice fa-4x"></i>
                             
                             </div>
                             
@@ -233,7 +252,9 @@
             
             
 <div class="content">
-    
+    <p>Traditional testing is fine but it’s not perfect. Tests often check for a golden path that works, when errors actually happen when the code or user does something unexpected. And with automated testing humans still have to write the tests.</p>
+
+<p><strong>Reflekt</strong> writes the tests for you, and tests in the negative for situations that you wouldn’t have noticed. It works out of the box with no extra coding required. Because Reflekt tests your objects as they are used in the normal flow of the application, you get real world test results.</p>
 
 </div>
           </div>

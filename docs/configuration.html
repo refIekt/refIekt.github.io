@@ -19,19 +19,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
     
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Usage | Reflekt</title>
+<title>Configuration | Reflekt</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Usage" />
+<meta property="og:title" content="Configuration" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Reflective testing." />
 <meta property="og:description" content="Reflective testing." />
-<link rel="canonical" href="/docs/usage.html" />
-<meta property="og:url" content="/docs/usage.html" />
+<link rel="canonical" href="/docs/configuration.html" />
+<meta property="og:url" content="/docs/configuration.html" />
 <meta property="og:site_name" content="Reflekt" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Usage" />
+<meta property="twitter:title" content="Configuration" />
 <script type="application/ld+json">
-{"description":"Reflective testing.","headline":"Usage","@type":"WebPage","url":"/docs/usage.html","@context":"https://schema.org"}</script>
+{"description":"Reflective testing.","headline":"Configuration","@type":"WebPage","url":"/docs/configuration.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- head scripts --></head>
 
@@ -100,7 +100,7 @@
                 
                 <li><a href="/docs/skipping-actions" class="">Skipping actions</a></li>
                 
-                <li><a href="/docs/dependency-injection" class="">Dependency injection</a></li>
+                <li><a href="/docs/configuration" class="">Configuration</a></li>
                 
             </ul>
             
@@ -111,9 +111,9 @@
             
             <ul>
                 
-                <li><a href="/docs/reflect-execute-loop/" class="">Reflect-Execute Loop</a></li>
+                <li><a href="/docs/reflect-execute-loop/" class="">Reflect-Execute loop</a></li>
                 
-                <li><a href="/docs/control-experiment-loop/" class="">Control-Experiment Loop</a></li>
+                <li><a href="/docs/control-experiment-loop/" class="">Control-Experiment loop</a></li>
                 
             </ul>
             
@@ -132,14 +132,18 @@
             
             
 <div class="content">
-    <p>Reflekt is designed to be super simple to use, all you have to do is <code class="language-plaintext highlighter-rouge">prepend</code> Reflekt to your class:</p>
+    <h2 id="configuration">Configuration</h2>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyClass</span>
-  <span class="n">prepend</span> <span class="no">Reflekt</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Reflekt</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+
+  <span class="c1"># Reflekt is enabled by default and should be disabled on production.</span>
+  <span class="n">config</span><span class="p">.</span><span class="nf">enabled</span> <span class="o">=</span> <span class="kp">true</span>
+
+  <span class="c1"># The amount of reflections to create per method call.</span>
+  <span class="n">config</span><span class="p">.</span><span class="nf">reflect_amount</span> <span class="o">=</span> <span class="mi">5</span>
+
 <span class="k">end</span>
 </code></pre></div></div>
-
-<p>In practice you will need to skip certain actions from being simulated. This stops duplicate data and prevent real data from being deleted.</p>
 
 </div>
           </div>
