@@ -11,11 +11,11 @@ items:
     description: Halve the amount of work.
   -
     title: Real results
-    icon: fa-dice
+    icon: fa-check-circle
     description: Test with real data in real-time.
   -
     title: Simulate everything
-    icon: fa-bug
+    icon: fa-dice
     description: Find bugs you never thought possible.
   -
     title: Open source

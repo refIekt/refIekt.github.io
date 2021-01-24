@@ -8,7 +8,6 @@
   background: #eee;
   border-bottom: 1px solid #c9c9c9;
 }
-
 .navbar-brand {
   a.navbar-item {
     width: 50px;
@@ -19,6 +18,46 @@
     background-repeat: no-repeat;
     background-size: 40px auto;
     background-position: 50% 50%;
+  }
+}
+
+// Hero.
+@media screen and (min-width: 769px) {
+  .hero.is-medium .hero-body {
+    padding: 3rem 1.5rem;
+  }
+}
+.hero {
+  .title,
+  .subtitle,
+  .hero__icon,
+  .hero__code {
+    display: block;
+    margin: 0 auto;
+  }
+  .title,
+  .subtitle {
+    text-align: center;
+  }
+  .title {
+    margin-bottom: 2rem;
+  }
+  .hero__icon {
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+  .hero__code {
+    margin-top: 3rem;
+    max-width: 300px;
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .highlight {
+      font-size: 1.5rem;
+      border-radius: 8px;
+    }
   }
 }
 
