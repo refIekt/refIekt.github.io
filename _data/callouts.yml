@@ -4,11 +4,11 @@ items:
   -
     title: Don't Repeat Yourself
     icon: fa-copy
-    description: Code is the source of truth, not the tests.
+    description: Code is the source of truth, not the test.
   -
     title: Speed up development
     icon: fa-clock
-    description: No more time spent writing tests!
+    description: No more manually writing tests!
   -
     title: Real results
     icon: fa-check-circle
@@ -20,7 +20,7 @@ items:
   -
     title: Open source
     icon: fa-globe-europe
-    description: Community driven.
+    description: Unless you're Amazon, then stay back!
   -
     title: More fun
     icon: fa-smile-beam
