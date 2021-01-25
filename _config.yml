@@ -12,7 +12,7 @@ title: Reflekt
 email: maediprichard@gmail.com
 description: Reflective testing.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://reflekt.dev"
 twitter_username: maediprichard
 github_username:  refIekt
 
