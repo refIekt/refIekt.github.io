@@ -1,7 +1,6 @@
 ---
 title: Control-Experiment loop
 menubar: docs
-permalink: docs/control-experiment-loop
 ---
 
 # Control-Experiment loop

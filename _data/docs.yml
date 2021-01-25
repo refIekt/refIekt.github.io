@@ -10,6 +10,6 @@
   - name: Architecture
     items:
       - name: Reflect-Execute loop
-        link: /docs/reflect-execute-loop/
+        link: /docs/reflect-execute-loop
       - name: Control-Experiment loop
-        link: /docs/control-experiment-loop/
+        link: /docs/control-experiment-loop
