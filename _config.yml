@@ -13,7 +13,6 @@ twitter_username: maediprichard
 github_username:  refIekt
 
 # Build settings.
-keep_files: ['CNAME']
 markdown: kramdown
 theme: bulma-clean-theme
 plugins:
