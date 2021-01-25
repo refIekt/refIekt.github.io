@@ -4,15 +4,12 @@ on:
   push:
     branches:
       - master
-      # - source
-      # It is highly recommended that you only run this action on push to a
-        # specific branch, eg. master or source (if on *.github.io repo)
 
 jobs:
   jekyll:
     runs-on: ubuntu-16.04 # can change this to ubuntu-latest if you prefer
     steps:
-      - name: 📂 setup
+      - name: 📂setup
         uses: actions/checkout@v2
         # include the lines below if you are using jekyll-last-modified-at
         # or if you would otherwise need to fetch the full commit history
@@ -20,12 +17,12 @@ jobs:
         # with:
           # fetch-depth: '0'
 
-      - name: 💎 setup ruby
+      - name: 💎setup ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6 # can change this to 2.7 or whatever version you prefer
 
-      - name: 🔨 install dependencies & build site
+      - name: 🔨install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
@@ -64,11 +61,9 @@ jobs:
           ### If you need to specify any Jekyll build options, enable the above input
           ### Flags accepted can be found here https://jekyllrb.com/docs/configuration/options/#build-command-options
 
-      - name: 🚀 deploy
+      - name: 🚀deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          # if the repo you are deploying to is <username>.github.io, uncomment the line below.
-          # if you are including the line below, make sure your source files are NOT in the master branch:
           publish_branch: build
