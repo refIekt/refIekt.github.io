@@ -3,8 +3,6 @@ title: Configuration
 menubar: docs
 ---
 
-## Configuration
-
 ```ruby
 Reflekt.configure do |config|
 

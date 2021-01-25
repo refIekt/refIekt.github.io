@@ -1,5 +1,6 @@
 - items:
   - name: Usage
+    link: /docs/getting-started
     items:
       - name: Getting started
         link: /docs/getting-started
@@ -8,6 +9,7 @@
       - name: Configuration
         link: /docs/configuration
   - name: Concepts
+    link: /docs/reflect-execute-loop
     items:
       - name: Reflect-Execute loop
         link: /docs/reflect-execute-loop

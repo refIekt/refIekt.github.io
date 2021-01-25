@@ -3,8 +3,6 @@ title: Control-Experiment loop
 menubar: docs
 ---
 
-# Control-Experiment loop
-
 Reflekt builds itself as you build your application.
 
 **Terminology:**

@@ -3,8 +3,6 @@ title: Getting Started
 menubar: docs
 ---
 
-# Getting Started
-
 ## Installation
 
 In your project's Gemfile add:

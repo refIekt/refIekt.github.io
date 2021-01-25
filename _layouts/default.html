@@ -45,6 +45,11 @@
             {% include showcase.html %}
             {% include sponsors.html %}
             {% include gallery.html %}
+
+            {% unless page.show_hero %}
+              <h1 class="title">{{ page.title }}</h1>
+            {% endunless %}
+
             {{ content }}
           </div>
 

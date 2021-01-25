@@ -3,8 +3,6 @@ title: Skipping actions
 menubar: docs
 ---
 
-# Skipping actions
-
 You can configure Reflekt to skip "no undo" methods like deletion and sending email:
 
 ```ruby
