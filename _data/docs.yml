@@ -7,7 +7,7 @@
         link: /docs/skipping-actions
       - name: Configuration
         link: /docs/configuration
-  - name: Architecture
+  - name: Concepts
     items:
       - name: Reflect-Execute loop
         link: /docs/reflect-execute-loop
