@@ -6,6 +6,8 @@
         link: /docs/getting-started
       - name: Skipping actions
         link: /docs/skipping-actions
+      - name: Migrating metadata
+        link: /docs/migrating-metadata
       - name: Configuration
         link: /docs/configuration
   - name: Concepts

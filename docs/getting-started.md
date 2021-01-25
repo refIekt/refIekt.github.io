@@ -29,7 +29,6 @@ require 'reflekt'
 
 class ExampleClass
   prepend Reflekt
-end
 ```
 
 In practice you will need to skip certain actions from being simulated, to prevent duplicate data from being rendered to the screen or saved to the database.
