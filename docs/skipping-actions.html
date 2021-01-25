@@ -102,6 +102,8 @@
                 
                 <li><a href="/docs/skipping-actions" class="">Skipping actions</a></li>
                 
+                <li><a href="/docs/migrating-metadata" class="">Migrating metadata</a></li>
+                
                 <li><a href="/docs/configuration" class="">Configuration</a></li>
                 
             </ul>
@@ -149,7 +151,7 @@
 
 <p>Use <code class="language-plaintext highlighter-rouge">reflekt_skip</code> on the method that saves to the database to avoid persisting test data. If you still want to save test data to the database then use <a href="https://www.reddit.com/r/programming/comments/iz3rks/if_youre_not_practicing_within_the_scope_of_a/g6i1ex3/">dependency injection</a> to connect to a dummy database.</p>
 
-<h2 id="rendering-test-data">Rendering test data</h2>
+<h2 id="rendering-to-ui">Rendering to UI</h2>
 
 <p>Use <code class="language-plaintext highlighter-rouge">reflekt_skip</code> on methods that do the final render to the UI to avoid a visual mess of duplicated elements.
 Separate the final output from the rendering logic so that Reflekt can track changes in output.</p>

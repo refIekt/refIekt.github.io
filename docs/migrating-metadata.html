@@ -19,19 +19,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
     
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Reflect-Execute loop | Reflekt</title>
+<title>Migrating metadata | Reflekt</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Reflect-Execute loop" />
+<meta property="og:title" content="Migrating metadata" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Reflective testing." />
 <meta property="og:description" content="Reflective testing." />
-<link rel="canonical" href="https://reflekt.dev/docs/reflect-execute-loop.html" />
-<meta property="og:url" content="https://reflekt.dev/docs/reflect-execute-loop.html" />
+<link rel="canonical" href="https://reflekt.dev/docs/migrating-metadata.html" />
+<meta property="og:url" content="https://reflekt.dev/docs/migrating-metadata.html" />
 <meta property="og:site_name" content="Reflekt" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Reflect-Execute loop" />
+<meta property="twitter:title" content="Migrating metadata" />
 <script type="application/ld+json">
-{"description":"Reflective testing.","headline":"Reflect-Execute loop","@type":"WebPage","url":"https://reflekt.dev/docs/reflect-execute-loop.html","@context":"https://schema.org"}</script>
+{"description":"Reflective testing.","headline":"Migrating metadata","@type":"WebPage","url":"https://reflekt.dev/docs/migrating-metadata.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- head scripts --></head>
 
@@ -136,12 +136,48 @@
             
 
             
-              <h1 class="title">Reflect-Execute loop</h1>
+              <h1 class="title">Migrating metadata</h1>
             
 
             
 <div class="content">
-    <p>Reflekt is designed to be used without custom coding and with as little configuration as possible. That being said, you may be interested in understanding how Reflekt actually works.</p>
+    <div x-data="{visible: true}">
+    <div class="notification is-info" x-show.transition.duration.300ms="visible">
+        
+        <article class="media">
+            
+                <div class="media-left">
+                    <span class="icon"><i class="fas fa-exclamation-circle fa-lg"></i></span>
+                </div>
+            
+            <div class="media-content">
+                <div class="content"><p><strong>Note</strong>: Not yet implemented.</p>
+</div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<p>As you run your application metadata is created and stored in <code class="language-plaintext highlighter-rouge">db.js</code>.
+If you then change a method or variable name, previously saved metadata will become outdated.
+It’s possible to rename classes and methods without losing past reflections.</p>
+
+<h2 id="renaming-a-class">Renaming a class</h2>
+
+<p>Add the following inside your class:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">reflekt_rename</span> <span class="ss">:class</span><span class="p">,</span> <span class="ss">:Tiger</span>
+</code></pre></div></div>
+
+<h2 id="renaming-a-method">Renaming a method</h2>
+
+<p>Add the following inside your class:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">reflekt_rename</span> <span class="ss">:meow</span><span class="p">,</span> <span class="ss">:roar</span>
+</code></pre></div></div>
+
+<h2 id="summary">Summary</h2>
+
+<p>Now when the program runs again, old reflections will be updated.
+Once all reflections have been migrated <code class="language-plaintext highlighter-rouge">reflekt_rename</code> can be removed.</p>
 
 </div>
           </div>
