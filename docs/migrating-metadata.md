@@ -13,8 +13,10 @@ It's possible to rename classes and methods without losing past reflections.
 
 Add the following inside your class:
 ```ruby
-  reflekt_rename :class, :Tiger
+  reflekt_rename :Tiger
 ```
+
+Where `:Tiger` is the new class name.
 
 ## Renaming a method
 
@@ -22,6 +24,8 @@ Add the following inside your class:
 ```ruby
   reflekt_rename :meow, :roar
 ```
+
+Where `:meow` is the old method name and `:roar` is the new method name.
 
 ## Summary
 
