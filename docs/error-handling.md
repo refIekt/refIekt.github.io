@@ -7,4 +7,4 @@ Reflekt goes along for the ride with your application. When it encounters an err
 
 {% include notification.html status="is-info" message="**Note**: Not yet implemented." %}
 
-If Reflekt encounters an error then it will log it to `/reflections/errors.txt`.
+If Reflekt encounters an error then it will log it to `/reflections/error-log.txt`.

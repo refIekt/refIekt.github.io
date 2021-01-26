@@ -5,7 +5,7 @@ menubar: docs
 
 Reflekt is designed to be used without custom coding and with as little configuration as possible. That being said, you may be interested in understanding how Reflekt actually works.
 
-Reflekt wraps itself around your code, reflecting it, then returns control to the application to continue its normal execution. This process is called the Reflect-Execute loop because it happens via a single function that changes behaviour depending on what stage the loop is in.
+Reflekt wraps itself around your code, reflecting it, then returns control to the application to continue its original execution. This process is called the Reflect-Execute loop because it happens via a single function that changes behaviour depending on what stage the loop is in.
 
 ## Terminology
 
