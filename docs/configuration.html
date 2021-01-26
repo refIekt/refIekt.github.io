@@ -122,6 +122,17 @@
             </ul>
             
         </li>
+        
+        <li>
+            <a href="/docs/error-handling" class="">Advanced</a>
+            
+            <ul>
+                
+                <li><a href="/docs/error-handling" class="">Error handling</a></li>
+                
+            </ul>
+            
+        </li>
             
     </ul>
 
@@ -141,16 +152,65 @@
 
             
 <div class="content">
-    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Reflekt</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+    <p>To configure Reflekt call <code class="language-plaintext highlighter-rouge">Reflekt.configure</code> and modify a property on the <code class="language-plaintext highlighter-rouge">config</code> block parameter:</p>
 
-  <span class="c1"># Reflekt is enabled by default and should be disabled on production.</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Reflekt</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
   <span class="n">config</span><span class="p">.</span><span class="nf">enabled</span> <span class="o">=</span> <span class="kp">true</span>
-
-  <span class="c1"># The amount of reflections to create per method call.</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">reflect_amount</span> <span class="o">=</span> <span class="mi">5</span>
-
 <span class="k">end</span>
 </code></pre></div></div>
+
+<h4 id="enabled">enabled</h4>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">enabled</span> <span class="o">=</span> <span class="kp">true</span>
+</code></pre></div></div>
+<p>Reflekt is enabled by default and should be disabled on production.</p>
+
+<h4 id="git_ignore">git_ignore</h4>
+
+<div x-data="{visible: true}">
+    <div class="notification is-info" x-show.transition.duration.300ms="visible">
+        
+        <article class="media">
+            
+                <div class="media-left">
+                    <span class="icon"><i class="fas fa-exclamation-circle fa-lg"></i></span>
+                </div>
+            
+            <div class="media-content">
+                <div class="content"><p><strong>Note</strong>: Not yet implemented.</p>
+</div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">git_ignore</span> <span class="o">=</span> <span class="kp">true</span>
+</code></pre></div></div>
+<p>Reflekt is untracked in git by default.</p>
+
+<h4 id="reflect_amount">reflect_amount</h4>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">reflect_amount</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div></div>
+<p>The amount of reflections to create per method call. A control reflection is created in addition to this.</p>
+
+<h4 id="reflect_limit">reflect_limit</h4>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">reflect_limit</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div></div>
+<p>The maximum amount of reflections that can be created per instance/method. A method called thousands of times doesn’t need that many reflections.</p>
+
+<h4 id="output_path">output_path</h4>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">output_path</span> <span class="o">=</span> <span class="kp">nil</span>
+</code></pre></div></div>
+<p>An absolute path to the directory that contains the output directory. Defaults to current execution path.</p>
+
+<h4 id="output_directory">output_directory</h4>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">output_directory</span> <span class="o">=</span> <span class="s2">"reflections"</span>
+</code></pre></div></div>
+<p>Name of output directory.</p>
 
 </div>
           </div>
