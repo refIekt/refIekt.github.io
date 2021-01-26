@@ -5,11 +5,13 @@ menubar: docs
 
 Reflekt builds itself as you build your application.
 
-**Terminology:**
+## Terminology
+
 * `Control` - A shapshot of real data (a subclass of `Reflection`)
 * `Experiment` - A shapshot of random data (a subclass of `Reflection`)
 
-**The loop:**
+# The loop
+
 1. You write code and run it
 2. A `Control` reflection is created per method call, tracking input and output
 3. A set of rules are created from each `Control` on how the program works
