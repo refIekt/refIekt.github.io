@@ -41,12 +41,12 @@ config.reflect_limit = 10
 ```
 The maximum amount of reflections that can be created per instance/method. A method called thousands of times doesn't need that many reflections.
 
-#### output_path
+#### project_path
 
 ```ruby
-config.output_path = nil
+config.project_path = nil
 ```
-An absolute path to the directory that contains the output directory. Defaults to current execution path.
+An absolute path to the project root directory. Defaults to current execution path.
 
 #### output_directory
 
