@@ -154,6 +154,25 @@
 <div class="content">
     <p>Reflekt is designed to be used without custom coding and with as little configuration as possible. That being said, you may be interested in understanding how Reflekt actually works.</p>
 
+<p>Reflekt wraps itself around your code, reflecting it, then returns control to the application to continue its normal execution. This process is called the Reflect-Execute loop because it happens via a single function that changes behaviour depending on what stage the loop is in.</p>
+
+<h2 id="terminology">Terminology</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Action</code> - An action represents an event such as a method being called</li>
+</ul>
+
+<h2 id="the-loop">The loop</h2>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">Reflekt</code> is prepended to a class and setup</li>
+  <li>The method is overridden on class instantiation</li>
+  <li>An <code class="language-plaintext highlighter-rouge">Action</code> is created on method call</li>
+  <li>Many <code class="language-plaintext highlighter-rouge">Refections</code> are created per <code class="language-plaintext highlighter-rouge">Action</code></li>
+  <li>Each <code class="language-plaintext highlighter-rouge">Reflection</code> executes on cloned data</li>
+  <li>Flow is returned to the original method</li>
+</ol>
+
 </div>
           </div>
 
