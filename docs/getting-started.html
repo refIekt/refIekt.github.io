@@ -152,13 +152,30 @@
 
             
 <div class="content">
-    <h2 id="installation">Installation</h2>
+    <div x-data="{visible: true}">
+    <div class="notification is-info" x-show.transition.duration.300ms="visible">
+        
+        <article class="media">
+            
+                <div class="media-left">
+                    <span class="icon"><i class="fas fa-exclamation-circle fa-lg"></i></span>
+                </div>
+            
+            <div class="media-content">
+                <div class="content"><p><strong>Note</strong>: Do not use Reflekt on a live site.</p>
+</div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<h2 id="installation">Installation</h2>
 
 <p>In your project’s Gemfile add:</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'reflekt'</span>
 </code></pre></div></div>
 
-<p>In terminal run:</p>
+<p>Then in your terminal run:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
 </code></pre></div></div>
 
@@ -168,7 +185,7 @@
 
 <h2 id="adding-to-your-class">Adding to your class</h2>
 
-<p>Reflekt is designed to be super simple to use, all you have to do is <code class="language-plaintext highlighter-rouge">prepend</code> Reflekt to your class:</p>
+<p>All you need to do is <code class="language-plaintext highlighter-rouge">prepend</code> Reflekt to your class:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'reflekt'</span>
 
@@ -176,7 +193,7 @@
   <span class="n">prepend</span> <span class="no">Reflekt</span>
 </code></pre></div></div>
 
-<p>In practice you will need to skip certain actions from being simulated, to prevent duplicate data from being rendered to the screen or saved to the database.</p>
+<p>However you should skip certain actions from being simulated, to prevent duplicate data from being rendered to the screen or saved to the database.</p>
 
 <p><strong>Next:</strong> <a href="/docs/skipping-actions">Skipping actions</a></p>
 
