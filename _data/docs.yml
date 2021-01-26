@@ -17,3 +17,8 @@
         link: /docs/reflect-execute-loop
       - name: Control-Experiment loop
         link: /docs/control-experiment-loop
+  - name: Advanced
+    link: /docs/error-handling
+    items:
+      - name: Error handling
+        link: /docs/error-handling
