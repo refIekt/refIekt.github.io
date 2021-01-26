@@ -3,6 +3,8 @@ title: Getting Started
 menubar: docs
 ---
 
+{% include notification.html status="is-info" message="**Note**: Do not use Reflekt on a live site." %}
+
 ## Installation
 
 In your project's Gemfile add:
@@ -10,7 +12,7 @@ In your project's Gemfile add:
 gem 'reflekt'
 ```  
 
-In terminal run:
+Then in your terminal run:
 ```
 bundle install
 ```
@@ -22,7 +24,7 @@ gem install reflekt
 
 ## Adding to your class
 
-Reflekt is designed to be super simple to use, all you have to do is `prepend` Reflekt to your class:
+All you need to do is `prepend` Reflekt to your class:
 
 ```ruby
 require 'reflekt'
@@ -31,6 +33,6 @@ class ExampleClass
   prepend Reflekt
 ```
 
-In practice you will need to skip certain actions from being simulated, to prevent duplicate data from being rendered to the screen or saved to the database.
+However you should skip certain actions from being simulated, to prevent duplicate data from being rendered to the screen or saved to the database.
 
 **Next:** [Skipping actions](/docs/skipping-actions)
