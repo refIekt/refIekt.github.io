@@ -173,13 +173,11 @@ Separate the final output from the rendering logic so that Reflekt can track cha
 
 <p><strong>Don’t do:</strong></p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
-
   <span class="c1"># Business logic.</span>
   <span class="n">product</span><span class="p">.</span><span class="nf">title</span> <span class="o">=</span> <span class="s2">"Showing </span><span class="si">#{</span><span class="n">product</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">"</span>
 
   <span class="c1"># Rendering logic.</span>
   <span class="nb">puts</span> <span class="n">product</span>
-
 <span class="k">end</span>
 </code></pre></div></div>
 

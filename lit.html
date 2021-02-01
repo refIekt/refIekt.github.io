@@ -136,13 +136,15 @@
 
 <p>Simply start any command with <code class="language-plaintext highlighter-rouge">lit</code>:</p>
 
-<p><strong>Ruby:</strong><br />
-<code class="language-plaintext highlighter-rouge">ruby script.rb</code> becomes:</p>
+<h3 id="ruby">Ruby</h3>
+
+<p><code class="language-plaintext highlighter-rouge">ruby script.rb</code> becomes:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit ruby script.rb
 </code></pre></div></div>
 
-<p><strong>Rails:</strong><br />
-<code class="language-plaintext highlighter-rouge">rails server</code> becomes:</p>
+<h3 id="rails">Rails</h3>
+
+<p><code class="language-plaintext highlighter-rouge">rails server</code> becomes:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit rails server
 </code></pre></div></div>
 
@@ -161,9 +163,56 @@
 
 <p>Applications using the Lit API will install the <code class="language-plaintext highlighter-rouge">lit</code> command for you.</p>
 
-<h2 id="integrate-with-lit">Integrate with Lit</h2>
+<h2 id="flags">Flags</h2>
 
-<p>To integrate your application with Lit see the <a href="https://github.com/lit-cli/lit-api">Lit API</a>.</p>
+<p>Lit accepts flags to modify behaviour. They are prefixed with an <code class="language-plaintext highlighter-rouge">@</code> and added directly after the <code class="language-plaintext highlighter-rouge">lit</code> command:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit @flag ruby script.rb --verbose
+</code></pre></div></div>
+
+<p>Lit flags start with an <code class="language-plaintext highlighter-rouge">@</code> instead of a <code class="language-plaintext highlighter-rouge">--</code> so that they aren’t confused with flags for the command Lit is firing off.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### Status
+
+Filter logs by status:
+</code></pre></div></div>
+<p>lit @status=error ruby script.rb</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+### Delay
+
+Logs scrolling by too fast? Introduce a bit of delay to make them easier to read. The default delay is `0` seconds and this can be changed to any positive float or integer value.
+
+</code></pre></div></div>
+<p>lit @delay=1 ruby script.rb</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## API
+
+Instructions for integrating your application with Lit.
+
+### Usage
+
+At the top of your file add:
+```ruby
+require 'lit-cli'
+include Lit
+</code></pre></div></div>
+
+<p>Then use the <code class="language-plaintext highlighter-rouge">lit()</code> method:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"message"</span>
+</code></pre></div></div>
+
+<h3 id="installation-1">Installation</h3>
+
+<p>In Gemfile add:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'lit-cli'</span>
+</code></pre></div></div>
+
+<p>In terminal run:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<p>Or:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install lit-cli
+</code></pre></div></div>
 
 </div>
           </div>
