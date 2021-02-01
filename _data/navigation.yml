@@ -1,4 +1,6 @@
 - name: 📖 Documentation
   link: /docs/getting-started
+- name: 🔥 Lit
+  link: /lit
 - name: 🤖 Source Code
   link: https://github.com/refIekt/reflekt
