@@ -19,13 +19,13 @@ Lit is a command line interface for Reflekt (and others) that lets you view meta
 
 Simply start any command with `lit`:
 
-**Ruby:**
+**Ruby:**  
 `ruby script.rb` becomes:
 ```
 lit ruby script.rb
 ```
 
-**Rails:**
+**Rails:**  
 `rails server` becomes:
 ```
 lit rails server
