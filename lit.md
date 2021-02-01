@@ -58,7 +58,6 @@ lit @flag ruby script.rb --verbose
 
 Lit flags start with an `@` instead of a `--` so that they aren't confused with flags for the command Lit is firing off.
 
-```
 ### Status
 
 Filter logs by status:
