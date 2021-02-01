@@ -171,29 +171,28 @@
 
 <p>Lit flags start with an <code class="language-plaintext highlighter-rouge">@</code> instead of a <code class="language-plaintext highlighter-rouge">--</code> so that they aren’t confused with flags for the command Lit is firing off.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### Status
+<h3 id="status">Status</h3>
 
-Filter logs by status:
+<p>Filter logs by status:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit @status=error ruby script.rb
 </code></pre></div></div>
-<p>lit @status=error ruby script.rb</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-### Delay
 
-Logs scrolling by too fast? Introduce a bit of delay to make them easier to read. The default delay is `0` seconds and this can be changed to any positive float or integer value.
+<h3 id="delay">Delay</h3>
 
+<p>Logs scrolling by too fast? Introduce a bit of delay to make them easier to read. The default delay is <code class="language-plaintext highlighter-rouge">0</code> seconds and this can be changed to any positive float or integer value.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit @delay=1 ruby script.rb
 </code></pre></div></div>
-<p>lit @delay=1 ruby script.rb</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## API
 
-Instructions for integrating your application with Lit.
+<h2 id="api">API</h2>
 
-### Usage
+<p>Instructions for integrating your application with Lit.</p>
 
-At the top of your file add:
-```ruby
-require 'lit-cli'
-include Lit
+<h3 id="usage-1">Usage</h3>
+
+<p>At the top of your file add:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'lit-cli'</span>
+<span class="kp">include</span> <span class="no">Lit</span>
 </code></pre></div></div>
 
 <p>Then use the <code class="language-plaintext highlighter-rouge">lit()</code> method:</p>
