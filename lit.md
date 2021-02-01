@@ -31,6 +31,13 @@ lit ruby script.rb
 lit rails server
 ```
 
+Then run the application and watch the terminal window for Lit messages:
+<pre class="code">
+<span style="color:blue">🔥 12:50: my message (ℹ INFO)</span>
+<span style="color:green">🔥 12:50: my message (✔ PASS)</span>
+<span style="color:red">🔥 12:50: my message (⨯ FAIL)</span>
+</pre>
+
 ## Installation
 
 Run:
