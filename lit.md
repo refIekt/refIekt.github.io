@@ -1,6 +1,6 @@
 ---
 title: Lit CLI
-subtitle: Shine a light on terminal commands.
+subtitle: Shine a light on terminal commands. 🔥
 show_hero: true
 ---
 
@@ -13,15 +13,14 @@ show_hero: true
   </a>
 </p>
 
-*Shine a light on terminal commands.* 🔥
-
 Lit is Reflekt's command line interface that lets you view metadata generated as an application runs.
 
 ## Usage
 
-Simply start any command with `lit`.
+Simply start any command with `lit`:
 
 `rails server` becomes:
+```
 lit rails server
 ```
 
@@ -41,4 +40,4 @@ Applications using the Lit API will install the `lit` command for you.
 
 ## Integrate with Lit
 
-To integrate your application see the [Lit API](https://github.com/lit-cli/lit-api).
+To integrate your application with Lit see the [Lit API](https://github.com/lit-cli/lit-api).
