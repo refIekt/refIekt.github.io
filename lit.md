@@ -19,13 +19,15 @@ Lit is a command line interface for Reflekt (and others) that lets you view meta
 
 Simply start any command with `lit`:
 
-**Ruby:**  
+### Ruby
+
 `ruby script.rb` becomes:
 ```
 lit ruby script.rb
 ```
 
-**Rails:**  
+### Rails
+
 `rails server` becomes:
 ```
 lit rails server
@@ -47,6 +49,61 @@ gem install lit-cli
 
 Applications using the Lit API will install the `lit` command for you.
 
-## Integrate with Lit
+## Flags
 
-To integrate your application with Lit see the [Lit API](https://github.com/lit-cli/lit-api).
+Lit accepts flags to modify behaviour. They are prefixed with an `@` and added directly after the `lit` command:
+```
+lit @flag ruby script.rb --verbose
+```
+
+Lit flags start with an `@` instead of a `--` so that they aren't confused with flags for the command Lit is firing off.
+
+```
+### Status
+
+Filter logs by status:
+```
+lit @status=error ruby script.rb
+```
+
+### Delay
+
+Logs scrolling by too fast? Introduce a bit of delay to make them easier to read. The default delay is `0` seconds and this can be changed to any positive float or integer value.
+
+```
+lit @delay=1 ruby script.rb
+```
+
+## API
+
+Instructions for integrating your application with Lit.
+
+### Usage
+
+At the top of your file add:
+```ruby
+require 'lit-cli'
+include Lit
+```
+
+Then use the `lit()` method:
+```ruby
+lit "message"
+```
+
+### Installation
+
+In Gemfile add:
+```ruby
+gem 'lit-cli'
+```  
+
+In terminal run:
+```
+bundle install
+```
+
+Or:
+```
+gem install lit-cli
+```
