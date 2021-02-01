@@ -67,8 +67,7 @@ lit @status=error ruby script.rb
 
 ### Delay
 
-Logs scrolling by too fast? Introduce a bit of delay to make them easier to read. The default delay is `0` seconds and this can be changed to any positive float or integer value.
-
+Delay the execution of a program to make logs easier to read. The default delay is `0` seconds (no delay) but could be 1 second, for example:
 ```
 lit @delay=1 ruby script.rb
 ```
