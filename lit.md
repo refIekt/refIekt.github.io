@@ -56,7 +56,7 @@ Lit accepts flags to modify behaviour. They are prefixed with an `@` and added d
 lit @flag ruby script.rb --verbose
 ```
 
-Lit flags start with an `@` instead of a `--` so that they aren't confused with flags for the command Lit is firing off.
+Lit flags start with an `@` instead of a `--` so that they aren't confused with flags for the original command Lit is firing off.
 
 ### Status
 
