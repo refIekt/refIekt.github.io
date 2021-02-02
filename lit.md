@@ -105,7 +105,7 @@ control = Control.new(action, 0, @@reflekt.aggregator)
 action.control = control
 ```
 
-Now you've commented your code and your comments double as logs. The lit emoji acts as a nice sectional heading too.
+Now you've commented your code and your comments double as logs.
 
 You can even use the emoji `🔥()` instead of `lit()` to call the method... cause why not? Climate change is real and we're all going to die anyway. So the final code could be:
 
@@ -115,7 +115,7 @@ control = Control.new(action, 0, @@reflekt.aggregator)
 action.control = control
 ```
 
-These are all just ideas and it's up to you to decide how to write code and save the future of humanity.
+The lit emoji acts as a nice sectional heading too. These are all just ideas and it's up to you to decide how to write code and save the future of humanity.
 
 ### Installation
 
