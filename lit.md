@@ -100,7 +100,7 @@ action.control = control
 
 Becomes this:
 ```ruby
-lit "Create control for #{method} method", :info
+lit "Create control for #{method} method"
 control = Control.new(action, 0, @@reflekt.aggregator)
 action.control = control
 ```
@@ -108,7 +108,7 @@ action.control = control
 You can even use the emoji `🔥()` instead of `lit()` to call the method... cause why not? Climate change is real and we're all going to die anyway. So the final code could be:
 
 ```ruby
-🔥 "Create control for #{method} method", :info
+🔥 "Create control for #{method} method"
 control = Control.new(action, 0, @@reflekt.aggregator)
 action.control = control
 ```
