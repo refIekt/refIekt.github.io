@@ -89,6 +89,32 @@ Then use the `lit()` method:
 lit "message"
 ```
 
+#### Code as comments
+
+You can use the `lit()` method in place of comments to help document your code. This:
+```ruby
+# Create control for method.
+control = Control.new(action, 0, @@reflekt.aggregator)
+action.control = control
+```
+
+Becomes this:
+```ruby
+lit "Create control for #{method} method", :info
+control = Control.new(action, 0, @@reflekt.aggregator)
+action.control = control
+```
+
+You can even use the emoji `🔥()` instead of `lit()` to call the method... cause why not? Climate change is real and we're all going to die anyway. So the final code could be:
+
+```ruby
+🔥 "Create control for #{method} method", :info
+control = Control.new(action, 0, @@reflekt.aggregator)
+action.control = control
+```
+
+Now you've commented your code and your comments double as logs. The lit emoji acts as a nice sectional heading too. These are all just ideas and it's up to you to decide how to write code and save the future of humanity.
+
 ### Installation
 
 In Gemfile add:
@@ -104,4 +130,3 @@ bundle install
 Or:
 ```
 gem install lit-cli
-```
