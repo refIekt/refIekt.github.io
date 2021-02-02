@@ -198,6 +198,29 @@
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"message"</span>
 </code></pre></div></div>
 
+<h4 id="code-as-comments">Code as comments</h4>
+
+<p>You can use the <code class="language-plaintext highlighter-rouge">lit()</code> method in place of comments to help document your code. This:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create control for method.</span>
+<span class="n">control</span> <span class="o">=</span> <span class="no">Control</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="vc">@@reflekt</span><span class="p">.</span><span class="nf">aggregator</span><span class="p">)</span>
+<span class="n">action</span><span class="p">.</span><span class="nf">control</span> <span class="o">=</span> <span class="n">control</span>
+</code></pre></div></div>
+
+<p>Becomes this:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"Create control for </span><span class="si">#{</span><span class="nb">method</span><span class="si">}</span><span class="s2"> method"</span><span class="p">,</span> <span class="ss">:info</span>
+<span class="n">control</span> <span class="o">=</span> <span class="no">Control</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="vc">@@reflekt</span><span class="p">.</span><span class="nf">aggregator</span><span class="p">)</span>
+<span class="n">action</span><span class="p">.</span><span class="nf">control</span> <span class="o">=</span> <span class="n">control</span>
+</code></pre></div></div>
+
+<p>You can even use the emoji <code class="language-plaintext highlighter-rouge">🔥()</code> instead of <code class="language-plaintext highlighter-rouge">lit()</code> to call the method… cause why not? Climate change is real and we’re all going to die anyway. So the final code could be:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">🔥</span> <span class="s2">"Create control for </span><span class="si">#{</span><span class="nb">method</span><span class="si">}</span><span class="s2"> method"</span><span class="p">,</span> <span class="ss">:info</span>
+<span class="n">control</span> <span class="o">=</span> <span class="no">Control</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="vc">@@reflekt</span><span class="p">.</span><span class="nf">aggregator</span><span class="p">)</span>
+<span class="n">action</span><span class="p">.</span><span class="nf">control</span> <span class="o">=</span> <span class="n">control</span>
+</code></pre></div></div>
+
+<p>Now you’ve commented your code and your comments double as logs. The lit emoji acts as a nice sectional heading too. These are all just ideas and it’s up to you to decide how to write code and save the future of humanity.</p>
+
 <h3 id="installation-1">Installation</h3>
 
 <p>In Gemfile add:</p>
@@ -208,9 +231,9 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
 </code></pre></div></div>
 
-<p>Or:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install lit-cli
-</code></pre></div></div>
+<p>Or:
+```
+gem install lit-cli</p>
 
 </div>
           </div>
