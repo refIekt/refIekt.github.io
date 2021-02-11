@@ -3,7 +3,7 @@ title: Control-Experiment loop
 menubar: docs
 ---
 
-Reflekt builds itself as you build your application.
+Reflekt builds a database of metadata and reflections (test results) as you develop your application. The more you use Reflekt the more accurate the results.
 
 ## Terminology
 
