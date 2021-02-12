@@ -152,17 +152,14 @@
 </pre>
 
 <p>To view <code class="language-plaintext highlighter-rouge">/reflections</code> via the command line run:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit @type=control,experiment ruby run_me.rb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit @type=control,experiment @status=pass,fail ruby run_me.rb
 </code></pre></div></div>
 
 <p>You will get results like this:</p>
 <pre>
-🔥 10:07 <span style="color:blue">ℹ INFO</span> control Cat Create control for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> control Cat Reflected control for meow()
-🔥 10:07 <span style="color:blue">ℹ INFO</span> experiment Cat Create experiment #1 for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> experiment Cat Reflected experiment #1 for meow()
-🔥 10:07 <span style="color:blue">ℹ INFO</span> experiment Cat Create experiment #2 for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> experiment Cat Reflected experiment #2 for meow()
+🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:blue">control</span> <span style="color:grey">Cat</span> Reflected control for meow()
+🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:green">experiment</span> <span style="color:grey">Cat</span> Reflected experiment #1 for meow()
+🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:green">experiment</span> <span style="color:grey">Cat</span> Reflected experiment #2 for meow()
 </pre>
 
 <h3 id="flags">Flags</h3>
