@@ -38,17 +38,14 @@ Then run the application and watch the terminal window for Lit messages:
 
 To view `/reflections` via the command line run:
 ```
-lit @type=control,experiment ruby run_me.rb
+lit @type=control,experiment @status=pass,fail ruby run_me.rb
 ```
 
 You will get results like this:
 <pre>
-🔥 10:07 <span style="color:blue">ℹ INFO</span> control Cat Create control for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> control Cat Reflected control for meow()
-🔥 10:07 <span style="color:blue">ℹ INFO</span> experiment Cat Create experiment #1 for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> experiment Cat Reflected experiment #1 for meow()
-🔥 10:07 <span style="color:blue">ℹ INFO</span> experiment Cat Create experiment #2 for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> experiment Cat Reflected experiment #2 for meow()
+🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:blue">control</span> <span style="color:grey">Cat</span> Reflected control for meow()
+🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:green">experiment</span> <span style="color:grey">Cat</span> Reflected experiment #1 for meow()
+🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:green">experiment</span> <span style="color:grey">Cat</span> Reflected experiment #2 for meow()
 </pre>
 
 ### Flags
