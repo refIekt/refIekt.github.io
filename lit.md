@@ -131,13 +131,60 @@ Then use the `lit()` method:
 lit "message"
 ```
 
-Display a warning message:
-```ruby
-lit "Danger, Will Robinson!", :warn
-```
-Message types can be configured, see `demo/demo.rb` for more info.
+### lit()
 
-#### Code as comments
+```ruby
+lit message, status = :info, type = nil, context = nil
+```
+
+* String `message` - The message to show.
+* Symbol `status` (optional) - The status of the message such as `:info`, `:warn` or `:error`.
+* Symbol `type` (optional) - The type of data or entity this message represents such as `:ad` or `:person`.
+* String `context` (optional) - The current class name or object ID, anything that gives context.
+
+Available statuses and types can be configured, see `lib/config.rb` and `demo/demo.rb` for more info.
+
+### Symbols
+
+Special characters contain extra meaning when embedded in the `message` string.
+
+#### method()
+
+**Note:** Not implemented yet.
+
+```ruby
+lit "message method()"
+```
+
+Placing `()` next to a word will style them as a method.
+
+#### #number
+
+**Note:** Not implemented yet.
+
+```ruby
+lit "message #1"
+```
+
+Placing a `#` next to a number will style them as a number.
+
+#### >indent
+
+```ruby
+lit ">message"
+```
+
+Placing a `>` at the start of a message will indent the resulting log in the console. Multiple `>>>` symbols can be used and for each one, one space of indentation will be added. Indentation is not preserved when using `@status` or `@type` filters.
+
+#### ^separator
+
+```ruby
+lit "^message"
+```
+
+Placing a `^` at the start of a message will add a line break above the resulting log in the console. Multiple `^^^` symbols can be used and for each one, one line break will be added. Line breaks are not preserved when using `@status` or `@type` filters.
+
+### Code as comments
 
 You can use the `lit()` method in place of comments to help document your code. This:
 ```ruby
