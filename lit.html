@@ -234,12 +234,57 @@
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"message"</span>
 </code></pre></div></div>
 
-<p>Display a warning message:</p>
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"Danger, Will Robinson!"</span><span class="p">,</span> <span class="ss">:warn</span>
-</code></pre></div></div>
-<p>Message types can be configured, see <code class="language-plaintext highlighter-rouge">demo/demo.rb</code> for more info.</p>
+<h3 id="lit">lit()</h3>
 
-<h4 id="code-as-comments">Code as comments</h4>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="n">message</span><span class="p">,</span> <span class="n">status</span> <span class="o">=</span> <span class="ss">:info</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">context</span> <span class="o">=</span> <span class="kp">nil</span>
+</code></pre></div></div>
+
+<ul>
+  <li>String <code class="language-plaintext highlighter-rouge">message</code> - The message to show.</li>
+  <li>Symbol <code class="language-plaintext highlighter-rouge">status</code> (optional) - The status of the message such as <code class="language-plaintext highlighter-rouge">:info</code>, <code class="language-plaintext highlighter-rouge">:warn</code> or <code class="language-plaintext highlighter-rouge">:error</code>.</li>
+  <li>Symbol <code class="language-plaintext highlighter-rouge">type</code> (optional) - The type of data or entity this message represents such as <code class="language-plaintext highlighter-rouge">:ad</code> or <code class="language-plaintext highlighter-rouge">:person</code>.</li>
+  <li>String <code class="language-plaintext highlighter-rouge">context</code> (optional) - The current class name or object ID, anything that gives context.</li>
+</ul>
+
+<p>Available statuses and types can be configured, see <code class="language-plaintext highlighter-rouge">lib/config.rb</code> and <code class="language-plaintext highlighter-rouge">demo/demo.rb</code> for more info.</p>
+
+<h3 id="symbols">Symbols</h3>
+
+<p>Special characters contain extra meaning when embedded in the <code class="language-plaintext highlighter-rouge">message</code> string.</p>
+
+<h4 id="method">method()</h4>
+
+<p><strong>Note:</strong> Not implemented yet.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"message method()"</span>
+</code></pre></div></div>
+
+<p>Placing <code class="language-plaintext highlighter-rouge">()</code> next to a word will style them as a method.</p>
+
+<h4 id="number">#number</h4>
+
+<p><strong>Note:</strong> Not implemented yet.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"message #1"</span>
+</code></pre></div></div>
+
+<p>Placing a <code class="language-plaintext highlighter-rouge">#</code> next to a number will style them as a number.</p>
+
+<h4 id="indent">&gt;indent</h4>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"&gt;message"</span>
+</code></pre></div></div>
+
+<p>Placing a <code class="language-plaintext highlighter-rouge">&gt;</code> at the start of a message will indent the resulting log in the console. Multiple <code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code> symbols can be used and for each one, one space of indentation will be added. Indentation is not preserved when using <code class="language-plaintext highlighter-rouge">@status</code> or <code class="language-plaintext highlighter-rouge">@type</code> filters.</p>
+
+<h4 id="separator">^separator</h4>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"^message"</span>
+</code></pre></div></div>
+
+<p>Placing a <code class="language-plaintext highlighter-rouge">^</code> at the start of a message will add a line break above the resulting log in the console. Multiple <code class="language-plaintext highlighter-rouge">^^^</code> symbols can be used and for each one, one line break will be added. Line breaks are not preserved when using <code class="language-plaintext highlighter-rouge">@status</code> or <code class="language-plaintext highlighter-rouge">@type</code> filters.</p>
+
+<h3 id="code-as-comments">Code as comments</h3>
 
 <p>You can use the <code class="language-plaintext highlighter-rouge">lit()</code> method in place of comments to help document your code. This:</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create control for method.</span>
