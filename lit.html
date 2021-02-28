@@ -181,7 +181,7 @@
 
 <p>When in a Pry session, enter <code class="language-plaintext highlighter-rouge">x</code> to exit Pry or <code class="language-plaintext highlighter-rouge">!!!</code> to exit the program (use <code class="language-plaintext highlighter-rouge">x;</code> to access a variable called <code class="language-plaintext highlighter-rouge">x</code>).</p>
 
-<p><strong>Note:</strong> Only files required via <code class="language-plaintext highlighter-rouge">require_relative</code> are currently supported for Pry session.<br />
+<p><strong>Note:</strong> Only files required via <code class="language-plaintext highlighter-rouge">require_relative</code> are currently supported for Pry session until <a href="https://github.com/pry/pry/issues/2178">this issue</a> is solved.<br />
 <strong>Note:</strong> Pry is not available to <code class="language-plaintext highlighter-rouge">lit()</code> messages in the <em>first</em> file to <code class="language-plaintext highlighter-rouge">require 'lit_cli'</code>, so require Lit in your application’s entry point / main file if you need this feature.</p>
 
 <h4 id="status">@status</h4>
