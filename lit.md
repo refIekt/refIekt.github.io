@@ -32,7 +32,7 @@ lit ruby script.rb
 
 Then run the application and watch the terminal window for Lit messages:
 <p align="center">
-  <img src="/assets/images/lit.png" width="750"/>
+  <img src="/assets/images/lit.png" width="850"/>
 </p>
 
 ### Using Lit with Reflekt
