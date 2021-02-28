@@ -45,7 +45,7 @@ lit @type=result ruby run_me.rb
 ```
 
 You will get results like this:  
-<img src="/assets/images/reflekt-results.png" width="500"/>
+<img src="/assets/images/reflekt-results.png" width="750"/>
 
 ### Flags
 
