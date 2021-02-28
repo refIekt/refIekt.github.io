@@ -60,7 +60,7 @@ lit @step ruby script.rb
 
 When in a Pry session, enter `x` to exit Pry or `!!!` to exit the program (use `x;` to access a variable called `x`).
 
-**Note:** Only files required via `require_relative` are currently supported for Pry session.  
+**Note:** Only files required via `require_relative` are currently supported for Pry session until [this issue](https://github.com/pry/pry/issues/2178) is solved.  
 **Note:** Pry is not available to `lit()` messages in the *first* file to `require 'lit_cli'`, so require Lit in your application's entry point / main file if you need this feature.
 
 #### @status
