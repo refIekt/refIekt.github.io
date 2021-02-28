@@ -31,11 +31,9 @@ lit ruby script.rb
 ```
 
 Then run the application and watch the terminal window for Lit messages:
-<pre class="code" style="background:black;color:white">
-🔥 12:50 <span style="color:blue">ℹ info</span> Half price books at Jane's Book Emporium
-🔥 12:50 <span style="color:green">✔ pass</span> Amazing news, we're getting married!
-🔥 12:50 <span style="color:red">⨯ fail</span> They've run out of ice cream Timmy
-</pre>
+<p align="center">
+  <img src="/assets/images/lit.png" width="750"/>
+</p>
 
 ### Using Lit with Reflekt
 
