@@ -20,12 +20,7 @@ Lit lets you create console logs that are only visible after prefixing a command
 
 ## Usage
 
-Simply start any command with `lit`. For example `rails server` becomes:
-```
-lit rails server
-```
-
-A script like `ruby script.rb` becomes:
+Simply start any command with `lit`. For example a script like `ruby script.rb` becomes:
 ```
 lit ruby script.rb
 ```
