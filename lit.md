@@ -36,17 +36,15 @@ Then run the application and watch the terminal window for Lit messages:
 🔥 12:50 <span style="color:red">⨯ fail</span> They've run out of ice cream Timmy
 </pre>
 
-To view `/reflections` via the command line run:
+### Using Lit with Reflekt
+
+To view reflections via the command line run:
 ```
-lit @type=control,experiment @status=pass,fail ruby run_me.rb
+lit @type=result ruby run_me.rb
 ```
 
 You will get results like this:
-<pre>
-🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:blue">control</span> <span style="color:grey">Cat</span> Reflected control for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:green">experiment</span> <span style="color:grey">Cat</span> Reflected experiment #1 for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:green">experiment</span> <span style="color:grey">Cat</span> Reflected experiment #2 for meow()
-</pre>
+<img src="/assets/images/reflekt-results.png" width="500"/>
 
 ### Flags
 
@@ -63,6 +61,8 @@ Step through the code. The terminal will stop at each `lit()` message, then prom
 ```
 lit @step ruby script.rb
 ```
+
+When in a Pry session, enter `x` to exit Pry or `!!!` to exit the program (use `x;` to access a variable called `x`).
 
 **Note:** Only files required via `require_relative` are currently supported for Pry session.  
 **Note:** Pry is not available to `lit()` messages in the *first* file to `require 'lit_cli'`, so require Lit in your application's entry point / main file if you need this feature.
@@ -120,7 +120,7 @@ Instructions for integrating your application with Lit.
 
 ### Usage
 
-Require 'lit_cli' at the top of your file:
+Require `lit_cli` at the top of your file:
 ```ruby
 require 'lit_cli'
 ```
@@ -131,7 +131,7 @@ class ExampleClass
   include LitCLI
 ```
 
-Then use the `lit()` method:
+Then use the `lit()` instance method:
 ```ruby
 lit "message"
 ```
