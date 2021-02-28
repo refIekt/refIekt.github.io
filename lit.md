@@ -58,6 +58,8 @@ Flags start with an `@` instead of a `--` so that they aren't confused with flag
 
 #### @step
 
+<img src="/assets/gifs/step.gif" width="750"/>
+
 Step through the code. The terminal will stop at each `lit()` message, then prompt you to press *Enter* to continue to the next message or press *P* to enter a Pry session.
 ```
 lit @step ruby script.rb
@@ -90,6 +92,8 @@ lit @type=cat,dog ruby script.rb
 Types are optional and represent the type of data, similar to a class.
 
 #### @delay
+
+<img src="/assets/gifs/delay.gif" width="750"/>
 
 Delay the execution of a message to make fast outputting logs easier to read. The default delay is `0` seconds (no delay) but can be any positive `Integer` or `Float`, for example:
 ```
