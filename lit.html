@@ -151,16 +151,14 @@
 🔥 12:50 <span style="color:red">⨯ fail</span> They've run out of ice cream Timmy
 </pre>
 
-<p>To view <code class="language-plaintext highlighter-rouge">/reflections</code> via the command line run:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit @type=control,experiment @status=pass,fail ruby run_me.rb
+<h3 id="using-lit-with-reflekt">Using Lit with Reflekt</h3>
+
+<p>To view reflections via the command line run:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit @type=result ruby run_me.rb
 </code></pre></div></div>
 
-<p>You will get results like this:</p>
-<pre>
-🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:blue">control</span> <span style="color:grey">Cat</span> Reflected control for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:green">experiment</span> <span style="color:grey">Cat</span> Reflected experiment #1 for meow()
-🔥 10:07 <span style="color:green">✔ PASS</span> <span style="color:green">experiment</span> <span style="color:grey">Cat</span> Reflected experiment #2 for meow()
-</pre>
+<p>You will get results like this:
+<img src="/assets/images/reflekt-results.png" width="500" /></p>
 
 <h3 id="flags">Flags</h3>
 
@@ -175,6 +173,8 @@
 <p>Step through the code. The terminal will stop at each <code class="language-plaintext highlighter-rouge">lit()</code> message, then prompt you to press <em>Enter</em> to continue to the next message or press <em>P</em> to enter a Pry session.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lit @step ruby script.rb
 </code></pre></div></div>
+
+<p>When in a Pry session, enter <code class="language-plaintext highlighter-rouge">x</code> to exit Pry or <code class="language-plaintext highlighter-rouge">!!!</code> to exit the program (use <code class="language-plaintext highlighter-rouge">x;</code> to access a variable called <code class="language-plaintext highlighter-rouge">x</code>).</p>
 
 <p><strong>Note:</strong> Only files required via <code class="language-plaintext highlighter-rouge">require_relative</code> are currently supported for Pry session.<br />
 <strong>Note:</strong> Pry is not available to <code class="language-plaintext highlighter-rouge">lit()</code> messages in the <em>first</em> file to <code class="language-plaintext highlighter-rouge">require 'lit_cli'</code>, so require Lit in your application’s entry point / main file if you need this feature.</p>
@@ -225,7 +225,7 @@
 
 <h3 id="usage-1">Usage</h3>
 
-<p>Require ‘lit_cli’ at the top of your file:</p>
+<p>Require <code class="language-plaintext highlighter-rouge">lit_cli</code> at the top of your file:</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'lit_cli'</span>
 </code></pre></div></div>
 
@@ -234,7 +234,7 @@
   <span class="kp">include</span> <span class="no">LitCLI</span>
 </code></pre></div></div>
 
-<p>Then use the <code class="language-plaintext highlighter-rouge">lit()</code> method:</p>
+<p>Then use the <code class="language-plaintext highlighter-rouge">lit()</code> instance method:</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lit</span> <span class="s2">"message"</span>
 </code></pre></div></div>
 
