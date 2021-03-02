@@ -6,6 +6,8 @@
         link: /docs/getting-started
       - name: Skipping actions
         link: /docs/skipping-actions
+      - name: Viewing reflections
+        link: /docs/viewing-reflections
       - name: Migrating metadata
         link: /docs/migrating-metadata
       - name: Configuration
