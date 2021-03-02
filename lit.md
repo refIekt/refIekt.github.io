@@ -30,16 +30,6 @@ Then run the application and watch the terminal window for Lit messages:
   <img src="/assets/images/lit.png" width="850"/>
 </p>
 
-### Using Lit with Reflekt
-
-To view reflections via the command line run:
-```
-lit @type=result ruby run_me.rb
-```
-
-You will get results like this:  
-<img src="/assets/images/reflekt-results.png" width="750"/>
-
 ### Flags
 
 Lit accepts flags to modify behaviour. They are prefixed with an `@` and appended after the `lit` command:
