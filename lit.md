@@ -85,6 +85,8 @@ lit @delay=1 ruby script.rb
 
 ## Installation
 
+{% include notification.html status="is-info" message="**Note**: If an application is currently using Lit then the `lit` command will already be available in your terminal without any installation required." %}
+
 In Gemfile add:
 ```ruby
 gem 'lit-cli'
@@ -99,8 +101,6 @@ Or:
 ```
 gem install lit-cli
 ```
-
-If an application is currently using Lit then the `lit` command will already be available in your terminal without any installation required.
 
 ## API
 
@@ -191,10 +191,12 @@ action.control = control
 
 Now you've commented your code and your comments double as logs.
 
+### Emoji support
+
 You can even use the emoji `🔥()` instead of `lit()` to call the method... cause why not? Climate change is real and we're all going to die anyway. So the final code could be:
 
 ```ruby
-🔥 "Create control for #{method} method"
+🔥"Create control for #{method} method"
 control = Control.new(action, 0, @@reflekt.aggregator)
 action.control = control
 ```
