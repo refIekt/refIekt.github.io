@@ -203,6 +203,23 @@
 
 <h2 id="installation">Installation</h2>
 
+<div x-data="{visible: true}">
+    <div class="notification is-info" x-show.transition.duration.300ms="visible">
+        
+        <article class="media">
+            
+                <div class="media-left">
+                    <span class="icon"><i class="fas fa-exclamation-circle fa-lg"></i></span>
+                </div>
+            
+            <div class="media-content">
+                <div class="content"><p><strong>Note</strong>: If an application is currently using Lit then the <code class="language-plaintext highlighter-rouge">lit</code> command will already be available in your terminal without any installation required.</p>
+</div>
+            </div>
+        </article>
+    </div>
+</div>
+
 <p>In Gemfile add:</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'lit-cli'</span>
 </code></pre></div></div>
@@ -214,8 +231,6 @@
 <p>Or:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install lit-cli
 </code></pre></div></div>
-
-<p>If an application is currently using Lit then the <code class="language-plaintext highlighter-rouge">lit</code> command will already be available in your terminal without any installation required.</p>
 
 <h2 id="api">API</h2>
 
@@ -298,9 +313,11 @@
 
 <p>Now you’ve commented your code and your comments double as logs.</p>
 
+<h3 id="emoji-support">Emoji support</h3>
+
 <p>You can even use the emoji <code class="language-plaintext highlighter-rouge">🔥()</code> instead of <code class="language-plaintext highlighter-rouge">lit()</code> to call the method… cause why not? Climate change is real and we’re all going to die anyway. So the final code could be:</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">🔥</span> <span class="s2">"Create control for </span><span class="si">#{</span><span class="nb">method</span><span class="si">}</span><span class="s2"> method"</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">🔥</span><span class="s2">"Create control for </span><span class="si">#{</span><span class="nb">method</span><span class="si">}</span><span class="s2"> method"</span>
 <span class="n">control</span> <span class="o">=</span> <span class="no">Control</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="vc">@@reflekt</span><span class="p">.</span><span class="nf">aggregator</span><span class="p">)</span>
 <span class="n">action</span><span class="p">.</span><span class="nf">control</span> <span class="o">=</span> <span class="n">control</span>
 </code></pre></div></div>
