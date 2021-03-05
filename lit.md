@@ -13,6 +13,8 @@ show_hero: true
   <a href="https://rubygems.org/gems/lit-cli">
     <img src="https://badge.fury.io/rb/lit-cli.svg" alt="Gem Version" />
   </a>
+  <img src="https://img.shields.io/github/languages/code-size/refIekt/lit" alt="GitHub code size in bytes">
+  <img src="https://img.shields.io/gem/dt/lit-cli">
   <a class="github-button" href="https://github.com/refIekt/lit" data-icon="octicon-star" data-show-count="true" aria-label="Star Lit on GitHub">Star</a>
 </p>
 
